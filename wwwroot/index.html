@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Учет книг в библиотеке</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <h1>Система учета книг в библиотеке</h1>
+
+        <button id="newBookButton" class="small-button">Новая книга</button>
+
+        <section class="form-section">
+            <h2>Добавить книгу</h2>
+
+            <form id="bookForm">
+                <div class="form-row">
+                    <label>
+                        Название
+                        <input type="text" id="title" required>
+                    </label>
+
+                    <label>
+                        Автор
+                        <input type="text" id="author" required>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        Год
+                        <input type="number" id="publishYear" required>
+                    </label>
+
+                    <label>
+                        Жанр
+                        <input type="text" id="genre" required>
+                    </label>
+
+                    <label>
+                        Инв. номер
+                        <input type="text" id="inventoryNumber" required>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        Статус
+                        <select id="status">
+                            <option value="Available">В наличии</option>
+                            <option value="Issued">Выдана</option>
+                            <option value="WrittenOff">Списана</option>
+                            <option value="Repair">На ремонте</option>
+                        </select>
+                    </label>
+
+                    <label class="description-label">
+                        Описание
+                        <textarea id="description"></textarea>
+                    </label>
+
+                    <button type="submit">Сохранить</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="catalog-section">
+            <h2>Каталог</h2>
+
+            <p id="countText">0 книг</p>
+
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Поиск">
+
+                <select id="statusFilter">
+                    <option value="all">Все статусы</option>
+                    <option value="Available">В наличии</option>
+                    <option value="Issued">Выдана</option>
+                    <option value="WrittenOff">Списана</option>
+                    <option value="Repair">На ремонте</option>
+                </select>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Автор</th>
+                        <th>Год</th>
+                        <th>Жанр</th>
+                        <th>Инв. номер</th>
+                        <th>Статус</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="booksTableBody"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

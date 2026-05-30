@@ -1,0 +1,104 @@
+﻿body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1f1f1f;
+    background: #ffffff;
+}
+
+.page {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-top: 26px;
+    margin-bottom: 16px;
+}
+
+.small-button,
+button {
+    border: 1px solid #888;
+    background: #efefef;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+    button:hover {
+        background: #e0e0e0;
+    }
+
+.form-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #777;
+    padding: 4px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea {
+    width: 220px;
+    height: 64px;
+    resize: vertical;
+}
+
+.filters {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+    padding: 4px;
+}
+
+td {
+    padding: 5px 4px;
+    vertical-align: top;
+}
+
+.book-title {
+    font-weight: bold;
+}
+
+.book-description {
+    font-size: 14px;
+    color: #333;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+    .actions button {
+        margin-right: 4px;
+    }
